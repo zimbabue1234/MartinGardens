@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MartinGardens - Servicios de Jardinería Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>MartinGardens</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicios" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#galeria" class="nav-link">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero" id="inicio">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 1">
+                <div class="carousel-content">
+                    <h1>Jardines que Inspiran</h1>
+                    <p>Transformamos espacios en obras maestras naturales</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 2">
+                <div class="carousel-content">
+                    <h1>Diseño Profesional</h1>
+                    <p>Cada proyecto es único y personalizado</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 3">
+                <div class="carousel-content">
+                    <h1>Mantenimiento Experto</h1>
+                    <p>Cuidamos tu jardín durante todo el año</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-text">
+                    <h2>MartinGardens</h2>
+                    <h3>José Antonio Martín Domínguez</h3>
+                    <p>Especialistas en mantenimiento y cuidado de jardines en Jávea y alrededores</p>
+                    <a href="#contacto" class="cta-button">
+                        <span>Solicitar Presupuesto</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Profesional Certificado</h2>
+                <p>Contamos con las certificaciones oficiales para garantizar un servicio de calidad</p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Carné Usuario Profesional</h3>
+                    <p>Productos Fitosanitarios</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Instalación y Mantenimiento</h3>
+                    <p>Jardines y Zonas Verdes</p>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Mantenimiento de Piscinas</h3>
+                    <p>Uso Colectivo y Parques Acuáticos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones completas para el cuidado de tu jardín en Jávea y alrededores</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Mantenimiento</h3>
+                    <p>Poda, riego, fertilización y cuidado integral de tus plantas</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Plantación</h3>
+                    <p>Selección e instalación de plantas apropiadas para tu clima</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Sistemas de Riego</h3>
+                    <p>Instalación de sistemas de riego automático eficientes</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Construcción</h3>
+                    <p>Terrazas, senderos, muros y elementos decorativos</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Control de Plagas</h3>
+                    <p>Fumigación de palmeras, tratamiento de pulgón y cucarachas</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Mantenimiento de Piscinas</h3>
+                    <p>Limpieza y mantenimiento profesional de piscinas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Trabajos</h2>
+                <p>Algunos de los jardines que hemos transformado</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 1">
+                    <div class="gallery-overlay">
+                        <h4>Jardín Residencial</h4>
+                        <p>Diseño moderno con zona de descanso</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 2">
+                    <div class="gallery-overlay">
+                        <h4>Jardín Mediterráneo</h4>
+                        <p>Plantas autóctonas y bajo mantenimiento</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 3">
+                    <div class="gallery-overlay">
+                        <h4>Terraza Urbana</h4>
+                        <p>Optimización de espacios pequeños</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 4">
+                    <div class="gallery-overlay">
+                        <h4>Jardín Vertical</h4>
+                        <p>Soluciones innovadoras para muros</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 5">
+                    <div class="gallery-overlay">
+                        <h4>Piscina y Jardín</h4>
+                        <p>Integración perfecta con zona acuática</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 6">
+                    <div class="gallery-overlay">
+                        <h4>Jardín Zen</h4>
+                        <p>Espacios de tranquilidad y meditación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contacta con Nosotros</h2>
+                <p>¿Listo para transformar tu jardín? Hablemos de tu proyecto</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>José Antonio Martín Domínguez</h3>
+                        <p>Especialista en Jardinería</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                        <p>+34 650 98 43 09</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>martingardens@hotmail.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Zona de Servicio</h3>
+                        <p>Jávea y alrededores</p>
+                        <p>Comunidad Valenciana</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Servicio de interés</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="plantacion">Plantación</option>
+                                <option value="riego">Sistemas de riego</option>
+                                <option value="construccion">Construcción</option>
+                                <option value="plagas">Control de plagas</option>
+                                <option value="piscinas">Mantenimiento de piscinas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>MartinGardens</span>
+                    </div>
+                    <p>Transformando espacios en jardines de ensueño desde 2010. Tu jardín ideal es nuestro compromiso.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/34650984309" class="social-link whatsapp-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Mantenimiento</a></li>
+                        <li><a href="#servicios">Plantación</a></li>
+                        <li><a href="#servicios">Sistemas de riego</a></li>
+                        <li><a href="#servicios">Control de plagas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +34 650 98 43 09</li>
+                        <li><i class="fas fa-envelope"></i> martingardens@hotmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jávea y alrededores</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Certificaciones</h4>
+                    <ul>
+                        <li>Carné Usuario Profesional Fitosanitarios</li>
+                        <li>Instalación y Mantenimiento Jardines</li>
+                        <li>Mantenimiento Piscinas Colectivas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 MartinGardens - José Antonio Martín Domínguez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
