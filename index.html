@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -16,7 +18,7 @@
                 <i class="fas fa-leaf"></i>
                 <span>MartinGardens</span>
             </div>
-            
+
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -44,58 +46,51 @@
     <section class="hero" id="inicio">
         <div class="carousel-container">
             <div class="carousel-slide active">
-                <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 1">
+                <img src="media/8.jpg" alt="Jardín Moderno 1">
                 <div class="carousel-content">
-                    <h1>Jardines que Inspiran</h1>
-                    <p>Transformamos espacios en obras maestras naturales</p>
                 </div>
             </div>
-            
+
             <div class="carousel-slide">
-                <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 2">
+                <img src="media/9.jpg" alt="Jardín Moderno 2">
                 <div class="carousel-content">
-                    <h1>Diseño Profesional</h1>
-                    <p>Cada proyecto es único y personalizado</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="media/10.jpg" alt="Jardín Moderno 3">
+                    <div class="carousel-content">
+                    </div>
                 </div>
             </div>
-            
-            <div class="carousel-slide">
-                <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardín Moderno 3">
-                <div class="carousel-content">
-                    <h1>Mantenimiento Experto</h1>
-                    <p>Cuidamos tu jardín durante todo el año</p>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-text">
+                        <h2>MartinGardens</h2>
+                        <h3>José Antonio Martín Domínguez</h3>
+                        <p>Especialista en mantenimiento y cuidado de jardines en Jávea y alrededores</p>
+                        <a href="#contacto" class="cta-button">
+                            <span>Solicitar Presupuesto</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="carousel-controls">
-            <button class="carousel-btn prev-btn" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-btn next-btn" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <div class="carousel-indicators">
-            <span class="indicator active" data-slide="0"></span>
-            <span class="indicator" data-slide="1"></span>
-            <span class="indicator" data-slide="2"></span>
-        </div>
-
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-text">
-                    <h2>MartinGardens</h2>
-                    <h3>José Antonio Martín Domínguez</h3>
-                    <p>Especialistas en mantenimiento y cuidado de jardines en Jávea y alrededores</p>
-                    <a href="#contacto" class="cta-button">
-                        <span>Solicitar Presupuesto</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Certifications Section -->
@@ -199,55 +194,43 @@
         <div class="container">
             <div class="section-header">
                 <h2>Nuestros Trabajos</h2>
-                <p>Algunos de los jardines que hemos transformado</p>
+                <p>Algunos de los jardines</p>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 1">
+                    <img src="media/1.jpg" alt="Proyecto 1">
                     <div class="gallery-overlay">
-                        <h4>Jardín Residencial</h4>
-                        <p>Diseño moderno con zona de descanso</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 2">
+                    <img src="media/2.jpg" alt="Proyecto 2">
                     <div class="gallery-overlay">
-                        <h4>Jardín Mediterráneo</h4>
-                        <p>Plantas autóctonas y bajo mantenimiento</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 3">
+                    <img src="media/3.jpg" alt="Proyecto 3">
                     <div class="gallery-overlay">
-                        <h4>Terraza Urbana</h4>
-                        <p>Optimización de espacios pequeños</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 4">
-                    <div class="gallery-overlay">
-                        <h4>Jardín Vertical</h4>
-                        <p>Soluciones innovadoras para muros</p>
+                    <img src="media/4.jpg" alt="Proyecto 4">
+                    <div class="gallery-overlay">>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 5">
+                    <img src="media/5.jpg" alt="Proyecto 5">
                     <div class="gallery-overlay">
-                        <h4>Piscina y Jardín</h4>
-                        <p>Integración perfecta con zona acuática</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto 6">
+                    <img src="media/6.jpg" alt="Proyecto 6">
                     <div class="gallery-overlay">
-                        <h4>Jardín Zen</h4>
-                        <p>Espacios de tranquilidad y meditación</p>
                     </div>
                 </div>
             </div>
@@ -330,7 +313,8 @@
 
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn">
@@ -352,11 +336,13 @@
                         <i class="fas fa-leaf"></i>
                         <span>MartinGardens</span>
                     </div>
-                    <p>Transformando espacios en jardines de ensueño desde 2010. Tu jardín ideal es nuestro compromiso.</p>
+                    <p>Transformando espacios en jardines de ensueño desde 2010. Tu jardín ideal es nuestro compromiso.
+                    </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/34650984309" class="social-link whatsapp-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/34650984309" class="social-link whatsapp-link" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -397,4 +383,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
