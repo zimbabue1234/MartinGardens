@@ -198,11 +198,11 @@ document.addEventListener('DOMContentLoaded', function() {
     new Carousel();
 });
 
-// Form handling
+// Form handling with email integration
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
 
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         // Get form data
@@ -222,25 +222,42 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Simulate form submission
+        // Show loading state
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
         submitBtn.disabled = true;
 
-        // Simulate API call
-        setTimeout(() => {
-            // Reset form
-            contactForm.reset();
-            
+        try {
+            // Send email via Supabase Edge Function
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message
+                showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
+            } else {
+                throw new Error(result.error || 'Error al enviar el mensaje');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            showNotification('Error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente por teléfono.', 'error');
+        } finally {
             // Reset button
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-            
-            // Show success message
-            showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
-        }, 2000);
+        }
     });
 });
 
