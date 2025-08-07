@@ -165,69 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
     new Carousel();
 });
 
-// Form handling with email integration
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
-        // Basic validation
-        if (!data.name || !data.email || !data.service) {
-            showNotification('Por favor, completa todos los campos obligatorios.', 'error');
-            return;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            showNotification('Por favor, introduce un email válido.', 'error');
-            return;
-        }
-
-        // Show loading state
-        const submitBtn = contactForm.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-
-        try {
-            // Send email via Supabase Edge Function
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-
-            if (response.ok && result.success) {
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
-            } else {
-                throw new Error(result.error || 'Error al enviar el mensaje');
-            }
-        } catch (error) {
-            console.error('Error sending email:', error);
-            showNotification('Error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente por teléfono.', 'error');
-        } finally {
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-});
-
 // Notification system
 function showNotification(message, type = 'info') {
     // Remove existing notifications
