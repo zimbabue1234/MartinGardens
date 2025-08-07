@@ -101,6 +101,9 @@ class Carousel {
         // Pause on hover
         const carouselContainer = document.querySelector('.carousel-container');
         carouselContainer.addEventListener('mouseenter', () => {
+        }
+        )
+    }
     // Contact form code removed as form was replaced with direct contact buttons
 
     handleSwipe(startX, endX) {
