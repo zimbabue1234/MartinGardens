@@ -101,43 +101,7 @@ class Carousel {
         // Pause on hover
         const carouselContainer = document.querySelector('.carousel-container');
         carouselContainer.addEventListener('mouseenter', () => {
-            this.stopAutoPlay();
-        });
-
-        carouselContainer.addEventListener('mouseleave', () => {
-            this.startAutoPlay();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                this.stopAutoPlay();
-                this.previousSlide();
-                this.startAutoPlay();
-            } else if (e.key === 'ArrowRight') {
-                this.stopAutoPlay();
-                this.nextSlide();
-                this.startAutoPlay();
-            }
-        });
-
-        // Touch/swipe support
-        let startX = 0;
-        let endX = 0;
-
-        carouselContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        carouselContainer.addEventListener('touchmove', (e) => {
-            e.preventDefault();
-        });
-
-        carouselContainer.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            this.handleSwipe(startX, endX);
-        });
-    }
+    // Contact form code removed as form was replaced with direct contact buttons
 
     handleSwipe(startX, endX) {
         const threshold = 50;
